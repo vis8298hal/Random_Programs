@@ -1,7 +1,0 @@
-# Random_Programs is a repository containing random programs I have developed
-<li>
-  <a href="./SAP_DAS.html">SAP Learning Roadmap for Data Science</a>
-</li>
-<li>
-  <a href="./Salesforce_DAS.html">Salesforce Roadmap for Data Science</a>a>
-</li>
