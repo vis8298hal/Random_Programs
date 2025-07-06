@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IBM Data Science Checklist</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    h1, h2 { color: #003366; }
+    .course {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .resources ul { margin-top: 5px; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    label { display: block; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+  <h1>✅ IBM Data Science Professional Certificate – Interactive Checklist</h1>
+
+  <div id="checklist-container"></div>
+
+  <script>
+    const checklistData = [
+      {
+        title: "🧩 Course 1: What is Data Science?",
+        tasks: [
+          "Understand different roles in data science",
+          "Identify key phases of data science methodology",
+          "Reflect on applications in finance, health, business"
+        ],
+        resources: [
+          { text: "IBM Data Science Blog", url: "https://medium.com/ibm-data-ai" },
+          { text: "Harvard Data Science Case Studies", url: "https://projects.iq.harvard.edu/stat110/home" }
+        ]
+      },
+      {
+        title: "🧪 Course 2: Tools for Data Science",
+        tasks: [
+          "Use Jupyter, Watson Studio, Git, GitHub",
+          "Navigate IBM Cloud Lite"
+        ],
+        resources: [
+          { text: "Jupyter Documentation", url: "https://jupyter.org/documentation" },
+          { text: "Git & GitHub Guide", url: "https://guides.github.com/" },
+          { text: "IBM Watson Studio", url: "https://dataplatform.cloud.ibm.com/" }
+        ]
+      },
+      {
+        title: "🧠 Course 3: Data Science Methodology",
+        tasks: [
+          "Describe all 10 stages of methodology",
+          "Match techniques to stages"
+        ],
+        resources: [
+          { text: "CRISP-DM Methodology", url: "https://www.sv-europe.com/crisp-dm-methodology/" }
+        ]
+      }
+    ];
+
+    const STORAGE_KEY = "ibm_ds_checklist";
+    const savedState = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+
+    const container = document.getElementById("checklist-container");
+
+    checklistData.forEach((course, index) => {
+      const div = document.createElement("div");
+      div.className = "course";
+
+      const h2 = document.createElement("h2");
+      h2.textContent = course.title;
+      div.appendChild(h2);
+
+      course.tasks.forEach((task, taskIndex) => {
+        const id = `course-${index}-task-${taskIndex}`;
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = id;
+        checkbox.checked = savedState[id] || false;
+
+        checkbox.addEventListener("change", () => {
+          savedState[id] = checkbox.checked;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
+        });
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(" " + task));
+        div.appendChild(label);
+      });
+
+      const resDiv = document.createElement("div");
+      resDiv.className = "resources";
+      if (course.resources?.length) {
+        const resTitle = document.createElement("strong");
+        resTitle.textContent = "Resources:";
+        resDiv.appendChild(resTitle);
+
+        const resList = document.createElement("ul");
+        course.resources.forEach(link => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = link.url;
+          a.target = "_blank";
+          a.textContent = link.text;
+          li.appendChild(a);
+          resList.appendChild(li);
+        });
+        resDiv.appendChild(resList);
+      }
+
+      div.appendChild(resDiv);
+      container.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
