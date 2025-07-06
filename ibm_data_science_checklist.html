@@ -1,124 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IBM Data Science Checklist</title>
+  <title>IBM Data Science Certification Checklist</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
-    h1, h2 { color: #003366; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
     .course {
       background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
       padding: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    .resources ul { margin-top: 5px; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    label { display: block; margin-bottom: 6px; }
+    label {
+      font-size: 1.1em;
+    }
+    .resources {
+      margin-top: 10px;
+    }
+    .resources a {
+      display: block;
+      color: #2980b9;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      font-size: 1em;
+      background: #2ecc71;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #27ae60;
+    }
   </style>
 </head>
 <body>
+  <h1>IBM Data Science Professional Certificate Curriculum</h1>
+  <p>Track your progress. Your checklist will be saved in your browser.</p>
 
-  <h1>✅ IBM Data Science Professional Certificate – Interactive Checklist</h1>
+  <div id="curriculum">
+    <!-- Course List Will Be Injected Here -->
+  </div>
 
-  <div id="checklist-container"></div>
+  <button onclick="saveProgress()">💾 Save Progress</button>
+  <button onclick="clearProgress()">❌ Clear Progress</button>
 
   <script>
-    const checklistData = [
+    const courses = [
       {
-        title: "🧩 Course 1: What is Data Science?",
-        tasks: [
-          "Understand different roles in data science",
-          "Identify key phases of data science methodology",
-          "Reflect on applications in finance, health, business"
-        ],
+        title: "1. What is Data Science?",
         resources: [
-          { text: "IBM Data Science Blog", url: "https://medium.com/ibm-data-ai" },
-          { text: "Harvard Data Science Case Studies", url: "https://projects.iq.harvard.edu/stat110/home" }
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/what-is-datascience" },
+          { label: "Wikipedia: Data Science", url: "https://en.wikipedia.org/wiki/Data_science" }
         ]
       },
       {
-        title: "🧪 Course 2: Tools for Data Science",
-        tasks: [
-          "Use Jupyter, Watson Studio, Git, GitHub",
-          "Navigate IBM Cloud Lite"
-        ],
+        title: "2. Tools for Data Science",
         resources: [
-          { text: "Jupyter Documentation", url: "https://jupyter.org/documentation" },
-          { text: "Git & GitHub Guide", url: "https://guides.github.com/" },
-          { text: "IBM Watson Studio", url: "https://dataplatform.cloud.ibm.com/" }
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/tools-for-data-science" },
+          { label: "Jupyter Notebooks", url: "https://jupyter.org/" }
         ]
       },
       {
-        title: "🧠 Course 3: Data Science Methodology",
-        tasks: [
-          "Describe all 10 stages of methodology",
-          "Match techniques to stages"
-        ],
+        title: "3. Data Science Methodology",
         resources: [
-          { text: "CRISP-DM Methodology", url: "https://www.sv-europe.com/crisp-dm-methodology/" }
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/data-science-methodology" }
+        ]
+      },
+      {
+        title: "4. Python for Data Science, AI & Development",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/python-for-applied-data-science-ai" },
+          { label: "Python.org", url: "https://www.python.org/" }
+        ]
+      },
+      {
+        title: "5. Python Project for Data Science",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/python-project-for-data-science" }
+        ]
+      },
+      {
+        title: "6. Databases and SQL for Data Science with Python",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/sql-data-science" }
+        ]
+      },
+      {
+        title: "7. Data Analysis with Python",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/data-analysis-with-python" }
+        ]
+      },
+      {
+        title: "8. Data Visualization with Python",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/python-for-data-visualization" }
+        ]
+      },
+      {
+        title: "9. Machine Learning with Python",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/machine-learning-with-python" }
+        ]
+      },
+      {
+        title: "10. Applied Data Science Capstone",
+        resources: [
+          { label: "Coursera Course", url: "https://www.coursera.org/learn/applied-data-science-capstone" }
         ]
       }
     ];
 
-    const STORAGE_KEY = "ibm_ds_checklist";
-    const savedState = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    function createCurriculum() {
+      const container = document.getElementById("curriculum");
+      const saved = JSON.parse(localStorage.getItem("ibmDataScienceChecklist") || '{}');
 
-    const container = document.getElementById("checklist-container");
+      courses.forEach((course, index) => {
+        const courseDiv = document.createElement("div");
+        courseDiv.className = "course";
 
-    checklistData.forEach((course, index) => {
-      const div = document.createElement("div");
-      div.className = "course";
-
-      const h2 = document.createElement("h2");
-      h2.textContent = course.title;
-      div.appendChild(h2);
-
-      course.tasks.forEach((task, taskIndex) => {
-        const id = `course-${index}-task-${taskIndex}`;
-        const label = document.createElement("label");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.id = id;
-        checkbox.checked = savedState[id] || false;
+        checkbox.id = "course_" + index;
+        checkbox.checked = saved["course_" + index] || false;
 
-        checkbox.addEventListener("change", () => {
-          savedState[id] = checkbox.checked;
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
-        });
+        const label = document.createElement("label");
+        label.htmlFor = "course_" + index;
+        label.innerText = course.title;
 
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(" " + task));
-        div.appendChild(label);
-      });
+        courseDiv.appendChild(checkbox);
+        courseDiv.appendChild(label);
 
-      const resDiv = document.createElement("div");
-      resDiv.className = "resources";
-      if (course.resources?.length) {
-        const resTitle = document.createElement("strong");
-        resTitle.textContent = "Resources:";
-        resDiv.appendChild(resTitle);
-
-        const resList = document.createElement("ul");
+        const resourceDiv = document.createElement("div");
+        resourceDiv.className = "resources";
         course.resources.forEach(link => {
-          const li = document.createElement("li");
           const a = document.createElement("a");
           a.href = link.url;
           a.target = "_blank";
-          a.textContent = link.text;
-          li.appendChild(a);
-          resList.appendChild(li);
+          a.textContent = "🔗 " + link.label;
+          resourceDiv.appendChild(a);
         });
-        resDiv.appendChild(resList);
+
+        courseDiv.appendChild(resourceDiv);
+        container.appendChild(courseDiv);
+      });
+    }
+
+    function saveProgress() {
+      const data = {};
+      courses.forEach((_, index) => {
+        const checkbox = document.getElementById("course_" + index);
+        data["course_" + index] = checkbox.checked;
+      });
+      localStorage.setItem("ibmDataScienceChecklist", JSON.stringify(data));
+      alert("✅ Progress saved!");
+    }
+
+    function clearProgress() {
+      if (confirm("Are you sure you want to clear your saved progress?")) {
+        localStorage.removeItem("ibmDataScienceChecklist");
+        location.reload();
       }
+    }
 
-      div.appendChild(resDiv);
-      container.appendChild(div);
-    });
+    createCurriculum();
   </script>
-
 </body>
 </html>
