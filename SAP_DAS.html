@@ -1,137 +1,229 @@
-<h1>SAP for Data Science – Learning Tracker & Checklist</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAP for Data Science – Learning Tracker & Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2a7f62;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul ul {
+      padding-left: 1.5rem;
+    }
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #2a7f62;
+      color: white;
+    }
+    a {
+      color: #1a5d8f;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #eee;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
 
-<h2>🎯 GOAL</h2>
-<p>Build SAP-specific data science skills using HANA, BTP, SAC. Model, analyze, predict, and deploy ML workflows in enterprise-grade environments.</p>
+  <h1>SAP for Data Science – Learning Tracker & Checklist</h1>
 
-<hr>
+  <h2>🎯 GOAL</h2>
+  <p>Build SAP-specific data science skills using HANA, BTP, SAC. Model, analyze, predict, and deploy ML workflows in enterprise-grade environments.</p>
 
-<h2>✅ PHASE 1: Foundations (Week 1)</h2>
+  <hr>
 
-<p><strong>Learn SAP Ecosystem Basics</strong></p>
-<ul>
-<li><input type="checkbox" disabled> Understand SAP HANA, BTP, SAC, and AI Core roles</li>
-<li><input type="checkbox" disabled> Create SAP ID and access <a href="https://learning.sap.com">learning.sap.com</a></li>
-<li><input type="checkbox" disabled> Enroll in:</li>
-<ul>
-<li><input type="checkbox" disabled> <a href="https://learning.sap.com/learning-journey/developing-with-sap-hana-cloud">Intro to SAP HANA</a></li>
-<li><input type="checkbox" disabled> <a href="https://learning.sap.com/learning-journey/discovering-sap-business-technology-platform">Discover SAP BTP</a></li>
-</ul>
-</ul>
+  <h2>✅ PHASE 1: Foundations (Week 1)</h2>
 
-<hr>
+  <p><strong>Learn SAP Ecosystem Basics</strong></p>
+  <ul>
+    <li><input type="checkbox" id="checkbox-phase1-1"> Understand SAP HANA, BTP, SAC, and AI Core roles</li>
+    <li><input type="checkbox" id="checkbox-phase1-2"> Create SAP ID and access <a href="https://learning.sap.com" target="_blank" rel="noopener noreferrer">learning.sap.com</a></li>
+    <li>Enroll in:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase1-3"> <a href="https://learning.sap.com/learning-journey/developing-with-sap-hana-cloud" target="_blank" rel="noopener noreferrer">Intro to SAP HANA</a></li>
+      <li><input type="checkbox" id="checkbox-phase1-4"> <a href="https://learning.sap.com/learning-journey/discovering-sap-business-technology-platform" target="_blank" rel="noopener noreferrer">Discover SAP BTP</a></li>
+    </ul>
+  </ul>
 
-<h2>✅ PHASE 2: SAP HANA Data Modeling (Weeks 2–3)</h2>
+  <hr>
 
-<p><strong>Hands-On with SAP HANA Cloud</strong></p>
-<ul>
-<li><input type="checkbox" disabled> Set up SAP HANA Cloud via BTP Free Tier</li>
-<li><input type="checkbox" disabled> Complete:</li>
-<ul>
-<li><input type="checkbox" disabled> <a href="https://developers.sap.com/mission.hana-cloud-get-started.html">HANA Cloud: Get Started</a></li>
-<li><input type="checkbox" disabled> <a href="https://learning.sap.com/learning-journey/developing-with-sap-hana-cloud/modeling-data-using-sap-hana-cloud">Data Modeling Journey</a></li>
-</ul>
-<li><input type="checkbox" disabled> Build:</li>
-<ul>
-<li><input type="checkbox" disabled> SQL queries</li>
-<li><input type="checkbox" disabled> Calculation views (star joins, analytical views)</li>
-</ul>
-</ul>
+  <h2>✅ PHASE 2: SAP HANA Data Modeling (Weeks 2–3)</h2>
 
-<hr>
+  <p><strong>Hands-On with SAP HANA Cloud</strong></p>
+  <ul>
+    <li><input type="checkbox" id="checkbox-phase2-1"> Set up SAP HANA Cloud via BTP Free Tier</li>
+    <li>Complete:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase2-2"> <a href="https://developers.sap.com/mission.hana-cloud-get-started.html" target="_blank" rel="noopener noreferrer">HANA Cloud: Get Started</a></li>
+      <li><input type="checkbox" id="checkbox-phase2-3"> <a href="https://learning.sap.com/learning-journey/developing-with-sap-hana-cloud/modeling-data-using-sap-hana-cloud" target="_blank" rel="noopener noreferrer">Data Modeling Journey</a></li>
+    </ul>
+    <li>Build:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase2-4"> SQL queries</li>
+      <li><input type="checkbox" id="checkbox-phase2-5"> Calculation views (star joins, analytical views)</li>
+    </ul>
+  </ul>
 
-<h2>✅ PHASE 3: Machine Learning with SAP (Weeks 4–5)</h2>
+  <hr>
 
-<p><strong>SAP HANA ML (PAL) + Python</strong></p>
-<ul>
-<li><input type="checkbox" disabled> Install Jupyter + Python, and <code>hana-ml</code> package</li>
-<li><input type="checkbox" disabled> Follow:</li>
-<ul>
-<li><input type="checkbox" disabled> <a href="https://developers.sap.com/tutorials/hana-ml-installation.html">HANA ML Setup</a></li>
-<li><input type="checkbox" disabled> PAL tutorials (classification, regression)</li>
-</ul>
-<li><input type="checkbox" disabled> Run:</li>
-<ul>
-<li><input type="checkbox" disabled> Clustering model</li>
-<li><input type="checkbox" disabled> Classification model</li>
-<li><input type="checkbox" disabled> Regression model</li>
-</ul>
-</ul>
+  <h2>✅ PHASE 3: Machine Learning with SAP (Weeks 4–5)</h2>
 
-<hr>
+  <p><strong>SAP HANA ML (PAL) + Python</strong></p>
+  <ul>
+    <li><input type="checkbox" id="checkbox-phase3-1"> Install Jupyter + Python, and <code>hana-ml</code> package</li>
+    <li>Follow:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase3-2"> <a href="https://developers.sap.com/tutorials/hana-ml-installation.html" target="_blank" rel="noopener noreferrer">HANA ML Setup</a></li>
+      <li><input type="checkbox" id="checkbox-phase3-3"> PAL tutorials (classification, regression)</li>
+    </ul>
+    <li>Run:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase3-4"> Clustering model</li>
+      <li><input type="checkbox" id="checkbox-phase3-5"> Classification model</li>
+      <li><input type="checkbox" id="checkbox-phase3-6"> Regression model</li>
+    </ul>
+  </ul>
 
-<h2>✅ PHASE 4: SAP Analytics Cloud (Week 6)</h2>
+  <hr>
 
-<p><strong>BI & Auto-ML in SAC</strong></p>
-<ul>
-<li><input type="checkbox" disabled> Set up SAC Trial account</li>
-<li><input type="checkbox" disabled> Learn:</li>
-<ul>
-<li><input type="checkbox" disabled> <a href="https://learning.sap.com/learning-journey/introduction-to-sap-analytics-cloud">SAP SAC Basics</a></li>
-<li><input type="checkbox" disabled> <a href="https://learning.sap.com/learning-journey/sap-analytics-cloud-predictive-planning">Smart Predict</a></li>
-</ul>
-<li><input type="checkbox" disabled> Build:</li>
-<ul>
-<li><input type="checkbox" disabled> Dashboards</li>
-<li><input type="checkbox" disabled> Forecast model (Smart Predict)</li>
-</ul>
-</ul>
+  <h2>✅ PHASE 4: SAP Analytics Cloud (Week 6)</h2>
 
-<hr>
+  <p><strong>BI & Auto-ML in SAC</strong></p>
+  <ul>
+    <li><input type="checkbox" id="checkbox-phase4-1"> Set up SAC Trial account</li>
+    <li>Learn:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase4-2"> <a href="https://learning.sap.com/learning-journey/introduction-to-sap-analytics-cloud" target="_blank" rel="noopener noreferrer">SAP SAC Basics</a></li>
+      <li><input type="checkbox" id="checkbox-phase4-3"> <a href="https://learning.sap.com/learning-journey/sap-analytics-cloud-predictive-planning" target="_blank" rel="noopener noreferrer">Smart Predict</a></li>
+    </ul>
+    <li>Build:</li>
+    <ul>
+      <li><input type="checkbox" id="checkbox-phase4-4"> Dashboards</li>
+      <li><input type="checkbox" id="checkbox-phase4-5"> Forecast model (Smart Predict)</li>
+    </ul>
+  </ul>
 
-<h2>✅ PHASE 5: Advanced ML Deployment (Weeks 7–8)</h2>
+  <hr>
 
-<p><strong>SAP AI Core + Launchpad</strong></p>
-<ul>
-<li><input type="checkbox" disabled> Set up AI Core and Launchpad in BTP</li>
-<li><input type="checkbox" disabled> Deploy a Python ML model</li>
-<li><input type="checkbox" disabled> Monitor training/inference jobs</li>
-<li><input type="checkbox" disabled> Follow: <a href="https://developers.sap.com/tutorials/ai-core-ml-scenario.html">ML with SAP AI Core Tutorial</a></li>
-</ul>
+  <h2>✅ PHASE 5: Advanced ML Deployment (Weeks 7–8)</h2>
 
-<hr>
+  <p><strong>SAP AI Core + Launchpad</strong></p>
+  <ul>
+    <li><input type="checkbox" id="checkbox-phase5-1"> Set up AI Core and Launchpad in BTP</li>
+    <li><input type="checkbox" id="checkbox-phase5-2"> Deploy a Python ML model</li>
+    <li><input type="checkbox" id="checkbox-phase5-3"> Monitor training/inference jobs</li>
+    <li><input type="checkbox" id="checkbox-phase5-4"> Follow: <a href="https://developers.sap.com/tutorials/ai-core-ml-scenario.html" target="_blank" rel="noopener noreferrer">ML with SAP AI Core Tutorial</a></li>
+  </ul>
 
-<h2>🧪 Project Ideas</h2>
+  <hr>
 
-<table>
-<thead>
-<tr>
-<th>Project</th>
-<th>Tools</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Churn Prediction</td>
-<td>HANA + PAL + SAC</td>
-<td><input type="checkbox" disabled></td>
-</tr>
-<tr>
-<td>Sales Forecast Dashboard</td>
-<td>HANA SQL + SAC Smart Predict</td>
-<td><input type="checkbox" disabled></td>
-</tr>
-<tr>
-<td>HR Analytics Report</td>
-<td>SAC</td>
-<td><input type="checkbox" disabled></td>
-</tr>
-<tr>
-<td>Supply Chain ML Model</td>
-<td>HANA ML + AI Core</td>
-<td><input type="checkbox" disabled></td>
-</tr>
-</tbody>
-</table>
+  <h2>🧪 Project Ideas</h2>
 
-<hr>
+  <table>
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Tools</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Churn Prediction</td>
+        <td>HANA + PAL + SAC</td>
+        <td><input type="checkbox" id="checkbox-project-1"></td>
+      </tr>
+      <tr>
+        <td>Sales Forecast Dashboard</td>
+        <td>HANA SQL + SAC Smart Predict</td>
+        <td><input type="checkbox" id="checkbox-project-2"></td>
+      </tr>
+      <tr>
+        <td>HR Analytics Report</td>
+        <td>SAC</td>
+        <td><input type="checkbox" id="checkbox-project-3"></td>
+      </tr>
+      <tr>
+        <td>Supply Chain ML Model</td>
+        <td>HANA ML + AI Core</td>
+        <td><input type="checkbox" id="checkbox-project-4"></td>
+      </tr>
+    </tbody>
+  </table>
 
-<h2>📦 Tools to Set Up</h2>
+  <hr>
 
-<ul>
-<li><input type="checkbox" disabled> SAP BTP Free Tier</li>
-<li><input type="checkbox" disabled> Jupyter Notebook + Python 3.8+ with <code>hana-ml</code></li>
-<li><input type="checkbox" disabled> SAP Analytics Cloud Trial (if available)</li>
-</ul>
+  <h2>📦 Tools to Set Up</h2>
 
-<hr>
+  <ul>
+    <li><input type="checkbox" id="checkbox-tools-1"> SAP BTP Free Tier</li>
+    <li><input type="checkbox" id="checkbox-tools-2"> Jupyter Notebook + Python 3.8+ with <code>hana-ml</code></li>
+    <li><input type="checkbox" id="checkbox-tools-3"> SAP Analytics Cloud Trial (if available)</li>
+  </ul>
+
+  <hr>
+
+  <script>
+    // Save and load checkbox states with localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+      // Load saved state
+      checkboxes.forEach(cb => {
+        const saved = localStorage.getItem(cb.id);
+        if (saved !== null) {
+          cb.checked = saved === 'true';
+        }
+      });
+
+      // Save state on change
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          localStorage.setItem(cb.id, cb.checked);
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>
