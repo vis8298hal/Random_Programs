@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI App Build Checklist</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+    h1, h2 { color: #2c3e50; }
+    .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    label { display: block; margin: 8px 0; }
+    input[type="checkbox"] { margin-right: 10px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #2980b9; }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI App Development Checklist</h1>
+
+  <div class="section">
+    <h2>Phase 1: Setup</h2>
+    <label><input type="checkbox"> Install Python, Docker, Flutter SDK</label>
+    <label><input type="checkbox"> Setup GitHub repo and virtual environment</label>
+    <label><input type="checkbox"> Learn Python basics + FastAPI routing</label>
+    <label><input type="checkbox"> Create basic FastAPI project</label>
+  </div>
+
+  <div class="section">
+    <h2>Phase 2: ML Model</h2>
+    <label><input type="checkbox"> Train ML model (e.g., classifier)</label>
+    <label><input type="checkbox"> Save model using joblib or pickle</label>
+    <label><input type="checkbox"> Build /predict route in FastAPI</label>
+    <label><input type="checkbox"> Test ML API locally</label>
+  </div>
+
+  <div class="section">
+    <h2>Phase 3: Docker & Microservices</h2>
+    <label><input type="checkbox"> Dockerize ML API</label>
+    <label><input type="checkbox"> Create Docker Compose setup</label>
+    <label><input type="checkbox"> Build Auth and Data microservices</label>
+    <label><input type="checkbox"> Test inter-service communication</label>
+  </div>
+
+  <div class="section">
+    <h2>Phase 4: Flutter Frontend</h2>
+    <label><input type="checkbox"> Build login and home UI in Flutter</label>
+    <label><input type="checkbox"> Connect to backend with http</label>
+    <label><input type="checkbox"> Show ML predictions in UI</label>
+    <label><input type="checkbox"> Handle errors and tokens</label>
+  </div>
+
+  <div class="section">
+    <h2>Phase 5: Deployment</h2>
+    <label><input type="checkbox"> Deploy backend on Render/Railway</label>
+    <label><input type="checkbox"> Deploy frontend with Firebase/Vercel</label>
+    <label><input type="checkbox"> Add CI/CD with GitHub Actions</label>
+    <label><input type="checkbox"> Secure API with HTTPS & Auth</label>
+  </div>
+
+  <button onclick="saveProgress()">💾 Save Progress</button>
+  <button onclick="resetProgress()" style="background:#e74c3c;">Reset</button>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    window.onload = () => {
+      const saved = JSON.parse(localStorage.getItem('checklist') || '{}');
+      checkboxes.forEach((cb, idx) => { cb.checked = saved[idx] || false; });
+    };
+    function saveProgress() {
+      const save = {};
+      checkboxes.forEach((cb, idx) => { save[idx] = cb.checked; });
+      localStorage.setItem('checklist', JSON.stringify(save));
+      alert("Progress saved locally!");
+    }
+    function resetProgress() {
+      if (confirm("Clear all saved progress?")) {
+        localStorage.removeItem('checklist');
+        checkboxes.forEach(cb => cb.checked = false);
+      }
+    }
+  </script>
+</body>
+</html>
