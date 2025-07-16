@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Microservices App Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+        h1, h2, h3 { color: #2c3e50; }
+        .section { background: white; padding: 20px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #3498db; color: white; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>AI-Powered App with Microservices: Full Tech Guide</h1>
+
+    <div class="section">
+        <h2>🔧 Core Tech Stack</h2>
+        <table>
+            <tr><th>Component</th><th>Tools</th></tr>
+            <tr><td>Microservices (APIs)</td><td>Python (FastAPI), Node.js (optional)</td></tr>
+            <tr><td>AI/ML Services</td><td>Python + TensorFlow / PyTorch + FastAPI</td></tr>
+            <tr><td>Frontend (All Devices)</td><td>Flutter (Dart)</td></tr>
+            <tr><td>Containerization</td><td>Docker, Docker Compose</td></tr>
+            <tr><td>Orchestration</td><td>Kubernetes (optional), Render (easy deployment)</td></tr>
+            <tr><td>Database</td><td>PostgreSQL, MongoDB, Redis</td></tr>
+            <tr><td>CI/CD</td><td>GitHub Actions, DockerHub, Render</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🧠 AI Model Deployment Tools</h2>
+        <ul>
+            <li>Model Training: <code>scikit-learn</code>, <code>TensorFlow</code>, <code>PyTorch</code></li>
+            <li>Model Serving: <code>FastAPI</code> + <code>joblib</code> or <code>ONNX</code></li>
+            <li>On-device Inference: <code>TensorFlow Lite</code>, <code>TorchScript</code></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🖥️ Cross-Platform Frontend (Flutter)</h2>
+        <ul>
+            <li><strong>Language:</strong> Dart</li>
+            <li><strong>Platforms:</strong> Android, iOS, Web, Desktop (Windows/macOS/Linux)</li>
+            <li><strong>Backend Communication:</strong> HTTP + JSON APIs from FastAPI</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📦 Recommended Learning Roadmap</h2>
+        <ol>
+            <li><strong>Step 1:</strong> Learn Python + FastAPI</li>
+            <li><strong>Step 2:</strong> Learn Flutter (Dart) for UI</li>
+            <li><strong>Step 3:</strong> Learn Docker for containers</li>
+            <li><strong>Step 4:</strong> Split services into ML + Auth + Data APIs</li>
+            <li><strong>Step 5:</strong> Deploy with Docker Compose or Render</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>🧰 Tools Summary Table</h2>
+        <table>
+            <tr><th>Category</th><th>Tools</th></tr>
+            <tr><td>Languages</td><td>Python, Dart, JavaScript (optional)</td></tr>
+            <tr><td>Backend Frameworks</td><td>FastAPI, Flask (optional)</td></tr>
+            <tr><td>Frontend</td><td>Flutter</td></tr>
+            <tr><td>ML Tools</td><td>TensorFlow, PyTorch, joblib, ONNX</td></tr>
+            <tr><td>Containers</td><td>Docker, Docker Compose</td></tr>
+            <tr><td>Deployment</td><td>Render, Heroku, Kubernetes (optional)</td></tr>
+            <tr><td>Databases</td><td>PostgreSQL, MongoDB, Redis</td></tr>
+            <tr><td>CI/CD</td><td>GitHub Actions, DockerHub</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🌐 Suggested Architecture Diagram (Conceptual)</h2>
+        <ul>
+            <li><strong>Flutter App</strong> → Calls <code>API Gateway</code></li>
+            <li><code>API Gateway</code> routes requests to microservices:</li>
+            <ul>
+                <li>📦 <strong>Auth Service</strong></li>
+                <li>🧠 <strong>AI/ML Prediction Service</strong></li>
+                <li>📊 <strong>Data Storage Service</strong></li>
+            </ul>
+            <li>Each service runs in its own <code>Docker</code> container</li>
+            <li>Optional: Use <code>Kubernetes</code> or <code>Render</code> for scaling</li>
+        </ul>
+    </div>
+
+</body>
+</html>
