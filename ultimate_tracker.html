@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise AI & MLOps Architect Master Tracker</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--accent-blue);
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            font-size: 0.95rem;
+        }
+
+        .meta-card {
+            background: var(--bg-secondary);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .meta-card strong {
+            color: var(--accent-blue);
+        }
+
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 1024px) {
+            .dashboard-layout {
+                grid-template-columns: 7fr 5fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        .calendar-wrapper {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+
+        .phase-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .phase-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-green);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .task-item:hover {
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .task-item input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 4px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .task-details {
+            flex: 1;
+        }
+
+        .task-name {
+            font-weight: 600;
+            display: block;
+        }
+
+        .task-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-left: 5px;
+            text-transform: uppercase;
+        }
+
+        .badge-udemy { background-color: #a435f0; color: #fff; }
+        .badge-oreilly { background-color: #e65226; color: #fff; }
+        .badge-project { background-color: #10b981; color: #fff; }
+        .badge-cert { background-color: #f59e0b; color: #fff; }
+
+        .notes-block {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent-blue);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Ultimate Hybrid Enterprise AI Architect Dashboard</h1>
+        <div class="meta-grid">
+            <div class="meta-card"><strong>Target Track:</strong> Platform Unification + Custom MLOps[cite: 1, 3]</div>
+            <div class="meta-card"><strong>Daily Routine:</strong> Weekdays 5:00 AM – 8:00 AM Slot</div>
+            <div class="meta-card"><strong>Market Focus:</strong> India GCC Product Hubs & Australia Premium Contracts[cite: 1]</div>
+            <div class="meta-card"><strong>Timeline:</strong> June 27, 2026 – October 3, 2026[cite: 1]</div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <!-- LEFT COLUMN: GRANULAR CHECKLISTS -->
+        <div class="main-content">
+            <div class="card">
+                <h2>Granular Learning & Execution Checklist</h2>
+
+                <!-- WEEKS 1-2 -->
+                <div class="phase-block">
+                    <div class="phase-title">
+                        <span>Pre-Flight Phase: Weeks 1–2 (June 27 – July 10)</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Core Engineering Baseline[cite: 1, 3]</span>
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Concurrent and Parallel Programming in Python (6h 40m) <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Deconstruct async/await mechanics, I/O bound restrictions, and coroutines[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">FastAPI - The Complete Course 2026 (Beginner + Advanced) <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Master syntax routers, request filtering schemas, and dependency injections[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Fluent Python (2nd Edition) Reference Drill <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Surgical reading on execution generators, data classes, and type hints[cite: 1, 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Oracle PL/SQL Programming (6th Edition) Shift <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Analyze Chapter 5 (Loops) and Chapter 15 (Cursors) to map out legacy operational limits[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Modern React From The Beginning <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Utilize weekend blocks to master standard state rendering paradigms[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Refresher Mini-Project 1: Asynchronous Log Filter <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Construct memory-efficient asynchronous structures concurrently filtering unstructured payloads[cite: 1].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Refresher Project 2 / TCS Hackathon #03: ABAP Code Modernization <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Build an LLM generative view refactoring legacy procedural code syntax into Object-Oriented layouts[cite: 2].</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- WEEKS 3-6 -->
+                <div class="phase-block">
+                    <div class="phase-title">
+                        <span>Phase 1: Weeks 3–6 (July 11 – August 7)</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Data Ingestion & Warehousing[cite: 1, 3]</span>
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">MuleSoft (Mule 4) for Beginners/Developers (20h 39m) <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Focus intensely on DataWeave 2.0 transformations, error handling, and API routing paths[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Enterprise Integration Patterns <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Study messaging solutions, decoupling schemas, and enterprise endpoint endpoints[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Deploy ML Model in Production with FastAPI and Docker (18h 13m) <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Containerize execution pipelines using Hugging Face transformers, Docker environments, and AWS options[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Google BigQuery: The Definitive Guide <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Master analytical window functions, distributed slot allocations, partitioning, and clustering[cite: 1, 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">GCP Associate Cloud Engineer Prep Tracks <span class="badge badge-project">GCP Track</span></span>
+                                <span class="task-meta">Integrate 20 bonus hours studying cloud infrastructure components, IAM policies, and compute rules.</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Major Project / TCS Hackathon #16: Automated Logs Triage System <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Stream DataWeave 2.0 mapped, tokenized PII records from MuleSoft straight into clustered BigQuery endpoints[cite: 1, 2].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">TARGET EXAMS: MuleSoft Developer I & GCP Associate Cloud Engineer <span class="badge badge-cert">Certification</span></span>
+                                <span class="task-meta">Hard gate deadline to clear both technical validation tracks on August 8, 2026[cite: 1].</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- WEEKS 7-10 -->
+                <div class="phase-block">
+                    <div class="phase-title">
+                        <span>Phase 2: Weeks 7–10 (August 8 – September 4)</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Unified Data Fabrics & Storage[cite: 1, 3]</span>
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Designing Data-Intensive Applications (22h) <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Analyze streaming architectures, distributed consistency limitations, and batch systems[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Data Cloud Consultant (Data 360) with Real-World Scenarios <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Study unified data profiles, fuzzy-matching logic boundaries, and mapping actions[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Vertex AI MLOps Pipeline Deployment Core Track <span class="badge badge-project">GCP Track</span></span>
+                                <span class="task-meta">Integrate 12 hours detailing managed feature stores, training pipeline engines, and artifacts tracking[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Mini-Project / TCS Hackathon #06: Semantic CRM Deduplicator <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Construct real-time multi-system fuzzy rule matches inside a Salesforce sandbox using transformers[cite: 1, 2].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Major Project: Distributed Composer & Dataflow Registry <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Orchestrate dynamic feature aggregate jobs using Airflow and Beam pushing directly into Vertex AI Stores[cite: 1].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">TARGET EXAMS: Salesforce Data Cloud Consultant & Resume Sync <span class="badge badge-cert">Certification</span></span>
+                                <span class="task-meta">Clear exam track by September 4, 2026. Deploy Phase 1 & 2 skills onto global market profiles[cite: 1].</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- WEEKS 11-14 -->
+                <div class="phase-block">
+                    <div class="phase-title">
+                        <span>Phase 3: Weeks 11–14 (September 5 – October 3)</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Autonomous Agents & Production Governance[cite: 1, 3]</span>
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Practical Retrieval Augmented Generation (RAG) Systems <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Study Vamsi Kurama's framework: semantic index scaling, chunk optimizations, and app metrics[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Machine Learning Design Patterns <span class="badge badge-oreilly">O'Reilly</span></span>
+                                <span class="task-meta">Master data drift tracking patterns, predictive model variance, and custom endpoint layers[cite: 1, 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Salesforce Agentforce Real-Time Project Implementation <span class="badge badge-udemy">Udemy Business</span></span>
+                                <span class="task-meta">Deploy live agents leveraging custom AgentScript parameters, prompt templates, and active flows[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">Google Professional ML Engineer Practice Test Bundles <span class="badge badge-project">GCP Track</span></span>
+                                <span class="task-meta">Dedicate 15 hours targeting pipeline troubleshooting methods and system variance deconstructions[cite: 3].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">The Capstone Integration / TCS Hackathon #09 or #49 <span class="badge badge-project">Project</span></span>
+                                <span class="task-meta">Deploy an autonomous Agentforce agent grounded with RAG, calling MuleSoft actions, backed by Vertex AI monitoring[cite: 1, 2].</span>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox">
+                            <div class="task-details">
+                                <span class="task-name">THE CROWN JEWELS: Agentforce Specialist & GCP Professional ML Engineer <span class="badge badge-cert">Certification</span></span>
+                                <span class="task-meta">Final technical target completion on October 3, 2026. Launch full-scale premium active market transition[cite: 1].</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: LIVE EMBEDDED GOOGLE CALENDAR & NOTES -->
+        <div class="sidebar">
+            <div class="card">
+                <h2>Live Roadmap Schedule</h2>
+                <div class="calendar-wrapper">
+                    <!-- Embedded Google Calendar Hook -->
+                    <iframe src="https://calendar.google.com/calendar/embed?src=8086b6757ced764e9d07c73620353521c02999d505967b6e71e6d50b8bdb3c3b%40group.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="notes-block">
+                    <strong>💡 Execution Rules:</strong>
+                    <ul>
+                        <li>Protect the 5:00 AM – 8:00 AM weekday window against organizational noise.</li>
+                        <li>Utilize the 90-minute morning theory split before executing code labs[cite: 3].</li>
+                        <li>Push broken code to a separate Git branch daily at 8:00 AM to preserve immediate velocity[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
